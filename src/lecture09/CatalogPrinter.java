@@ -25,7 +25,8 @@ public class CatalogPrinter {
                 //Executa uma expressão SQL e obtem seu resultado
                 ResultSet sizeResultSet = createResultSet(statement, sizeSQL);
                 //Executa uma expressão SQL e obtem seu resultado
-                ResultSet typeResultSet = createResultSet(statement, typeSQL)) {
+                ResultSet typeResultSet = createResultSet(statement, typeSQL)
+        ) {
 
             //Imprime o resultado da expressão SQL
             printBrandResultSet(brandResultSet);
