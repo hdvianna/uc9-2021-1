@@ -1,7 +1,6 @@
-package lecture10;
+package lecture11;
 
 import java.sql.*;
-import java.util.Calendar;
 
 public class BrandCRUD {
 
