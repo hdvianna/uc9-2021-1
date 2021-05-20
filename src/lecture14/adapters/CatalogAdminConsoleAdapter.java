@@ -7,6 +7,7 @@ import lecture13.lazy.mappers.BrandMapper;
 import lecture14.inputs.BrandInput;
 import lecture14.outputs.DefaultOutput;
 import lecture14.ports.CatalogAdmin;
+import lecture14.ports.CatalogAdminInterface;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,7 +23,7 @@ public class CatalogAdminConsoleAdapter {
     public void run() throws IOException, SQLException {
         try (Connection connection = createConnection()){
             Mapper<Brand> brandMapper = new BrandMapper(connection);
-            CatalogAdmin catalogAdmin = new CatalogAdmin(brandMapper);
+            CatalogAdminInterface catalogAdmin = new CatalogAdmin(brandMapper);
             showGreeting();
             newBrandForm(catalogAdmin);
         }
@@ -49,7 +50,7 @@ public class CatalogAdminConsoleAdapter {
         System.out.println("-".repeat(numberOfDashes));
     }
 
-    private void newBrandForm(CatalogAdmin catalogAdmin) {
+    private void newBrandForm(CatalogAdminInterface catalogAdmin) {
         Scanner input = new Scanner(System.in);
         System.out.print("Type the brand name: ");
         String description = input.nextLine();
