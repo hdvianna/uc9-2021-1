@@ -31,11 +31,11 @@ public class CatalogPrinter {
             //Imprime o resultado da expressão SQL
             printBrandResultSet(brandResultSet);
             //Imprime o resultado da expressão SQL
-            printBrandResultSet(colorResultSet);
+            printColorResultSet(colorResultSet);
             //Imprime o resultado da expressão SQL
-            printBrandResultSet(sizeResultSet);
+            printSizeResultSet(sizeResultSet);
             //Imprime o resultado da expressão SQL
-            printBrandResultSet(typeResultSet);
+            printTypeResultSet(typeResultSet);
         }
     }
 
